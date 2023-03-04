@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { Suspense } from "react";
 
-const Ball = () => {
+const Ball = (name, icon) => {
   return (
-    <div>Ball</div>
-  )
-}
+    <div>
+      <p>{name}</p>
+    </div>
+  );
+};
 
-export default Ball
+export default Ball;

@@ -1,78 +1,70 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React from "react";
 
-import { styles } from "../styles";
-import { navLinks } from "../constant";
-import { logo, menu, close } from "../assets";
+import { BiHomeAlt, BiUser } from "react-icons/bi";
+import {
+  BsClipboardData,
+  BsBriefcase,
+  BsChatSquare,
+  BsChatSquareText,
+} from "react-icons/bs";
+import { Link } from "react-scroll";
 
-const Navbar = () => {
-  const [active, setActive] = useState("");
-  const [toggle, setToggle] = useState(false);
+const Nav = () => {
   return (
-    <nav
-      className={`${styles.paddingX} w-full flex items-center py-5 fixed top-0 z-20 bg-primary`}
-    >
-      <div className="w-full flex justify-between items-center max-w-7xl mx-auto">
-        <Link
-          to="/"
-          className="flex items-center gap-2"
-          onClick={() => {
-            setActive("");
-            window.scrollTo(0, 0);
-          }}
-        >
-          <img src={logo} alt={logo} className="w-9 h-9 object-contain" />
-          <p className="text-white font-bold cursor-pointer text-[18px]">
-            Matias De La Cerda &nbsp;
-            <span className="sm:block hidden">Desarrollador Full Stack</span>
-          </p>
-        </Link>
-        <ul className="list-none hidden sm:flex flex-row gap-10">
-          {navLinks.map((link) => (
-            <li
-              key={link.id}
-              className={`${
-                active === link.title ? "text-white" : "text-secondary"
-              } hover:text-white text-[18px] font-medium cursor-pointer`}
-              onClick={() => setActive(link.title)}
-            >
-              <a href={`#${link.id}`}>{link.title}</a>
-            </li>
-          ))}
-        </ul>
-        <div className="sm:hidden flex flex-1 justify-end items-center">
-          <img
-            src={toggle ? close : menu}
-            alt={menu}
-            className="w-[28px] h-[28px] object-contain cursor-pointer"
-            onClick={() => setToggle(!toggle)}
-          />
-          <div
-            className={`${
-              !toggle ? "hidden" : "flex"
-            } p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}
+    <nav className="fixed bottom-2 lg:bottom-8 w-full overflow-hidden z-50">
+      <div className="container mx-auto">
+        <div className="w-full bg-black/20 h-[96px] backdrop-blur-2x1 rounded-full max-w-[460px] mx-auto px-5 flex justify-between text-2x1 text-white/50 items-center">
+          <Link
+            to="home"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            offset={-200}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
           >
-            <ul className="list-none flex  justify-end items-start flex-col gap-4">
-              {navLinks.map((link) => (
-                <li
-                  key={link.id}
-                  className={`${
-                    active === link.title ? "text-white" : "text-secondary"
-                  } font-poppins font-medium cursor-pointer text-[16px]`}
-                  onClick={() => {
-                    setActive(link.title);
-                    setToggle(!toggle);
-                  }}
-                >
-                  <a href={`#${link.id}`}>{link.title}</a>
-                </li>
-              ))}
-            </ul>
-          </div>
+            <BiHomeAlt />
+          </Link>
+          <Link
+            to="work"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+          >
+            <BsBriefcase />
+          </Link>
+          <Link
+            to="about"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+          >
+            <BiUser />
+          </Link>
+          <Link
+            to="services"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+          >
+            <BsClipboardData />
+          </Link>
+
+          <Link
+            to="contact"
+            activeClass="active"
+            smooth={true}
+            spy={true}
+            className="cursor-pointer w-[60px] h-[60px] flex items-center justify-center"
+          >
+            <BsChatSquareText />
+          </Link>
         </div>
       </div>
     </nav>
   );
 };
 
-export default Navbar;
+export default Nav;
