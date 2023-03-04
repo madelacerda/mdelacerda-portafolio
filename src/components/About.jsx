@@ -38,8 +38,8 @@ const About = () => {
   return (
     <div className="container p-8" id="work">
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionHeadText}>Introduccion</p>
-        <h2 className={styles.sectionSubText}>Quien Soy.</h2>
+        <p className={styles.sectionSubText}>Introduccion</p>
+        <h2 className={styles.sectionHeadText}>Quien Soy.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
