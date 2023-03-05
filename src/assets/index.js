@@ -22,6 +22,7 @@ import typescript from "./tech/typescript.png";
 
 import ecomsur from "./ecom-favicon_Mesa-de-trabajo-1.png";
 import merken from "./1670870404924.jfif";
+import vtex from "./images-removebg-preview.png";
 
 import cleoatelierreact from "./cleoatelierreact.png";
 import cleoangular from "./cleoangular.png";
@@ -31,6 +32,7 @@ import dashboard from "./dashboard.png";
 import crud from "./crud.png";
 
 export {
+  vtex,
   merken,
   cleoangular,
   crud,

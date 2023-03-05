@@ -22,6 +22,7 @@ import {
   dashboard,
   crud,
   ecomsur,
+  vtex,
 } from "../assets";
 
 export const navLinks = [
@@ -94,6 +95,10 @@ const technologies = [
   {
     name: "MongoDB",
     icon: mongodb,
+  },
+  {
+    name: "Vtex",
+    icon: vtex,
   },
   {
     name: "git",

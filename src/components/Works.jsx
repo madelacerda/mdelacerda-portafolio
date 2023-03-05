@@ -60,7 +60,7 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="p-8 ">
+    <div className="p-8 " id="project">
       <motion.div variants={textVariant()} className="text-center">
         <p className={styles.sectionSubText}>En que he trabajado</p>
         <h2 className={styles.sectionHeadText}>Proyectos.</h2>
