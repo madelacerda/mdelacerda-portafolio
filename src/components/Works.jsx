@@ -60,18 +60,15 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="p-8 t">
-      <motion.div
-        variants={textVariant()}
-        className="text-center flex justify-center"
-      >
+    <div className="p-8 ">
+      <motion.div variants={textVariant()} className="text-center">
         <p className={styles.sectionSubText}>En que he trabajado</p>
         <h2 className={styles.sectionHeadText}>Proyectos.</h2>
       </motion.div>
-      <div className="w-full flex">
+      <div className="w-full flex text-center justify-center">
         <motion.p
           variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
+          className="mt-3 text-secondary text-[17px] text-center max-w-3xl leading-[30px]"
         >
           En esta seccion podran ver los distintos proyectos que he realizado
           durante mi carrera, tanto como para mostrar mis habilidades y para
