@@ -36,21 +36,21 @@ const ServiceCard = ({ index, title, icon }) => (
 
 const About = () => {
   return (
-    <div className="container p-8" id="work">
+    <div className="text-center" id="work">
       <motion.div variants={textVariant()}>
         <p className={styles.sectionSubText}>Introduccion</p>
         <h2 className={styles.sectionHeadText}>Quien Soy.</h2>
       </motion.div>
       <motion.p
         variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
+        className="mt-4 text-center text-secondary text-[17px]   leading-[30px]"
       >
         Soy un Desarrollador Full Stack, con mas de 3 años de experiencia en
         desarrollo de aplicaciones Web. utilizando distintas tecnologias como
         ReactJS, TypeScript, Angular, NodeJS y otras. Tengo mas de 1 año de
         experiencia en Eccomerce utilizando VTEX
       </motion.p>
-      <div className="mt-20 flex flex-wrap gap-10">
+      <div className="mt-20 flex flex-wrap gap-10 justify-center">
         {services.map((service, index) => (
           <ServiceCard key={service.title} index={index} {...service} />
         ))}

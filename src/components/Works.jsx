@@ -43,8 +43,15 @@ const ProjectCard = ({
           </div>
         </div>
         <div className="mt-5">
-          <h3>{name}</h3>
-          <p>{description}</p>
+          <h3 className="text-white font-bold text-[24px]">{name}</h3>
+          <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-2">
+          {tags.map((tag) => (
+            <p key={tag.name} className={`text-[14px] ${tag.color}`}>
+              #{tag.name}
+            </p>
+          ))}
         </div>
       </Tilt>
     </motion.div>
@@ -53,8 +60,11 @@ const ProjectCard = ({
 
 const Works = () => {
   return (
-    <div className="p-8">
-      <motion.div variants={textVariant()}>
+    <div className="p-8 t">
+      <motion.div
+        variants={textVariant()}
+        className="text-center flex justify-center"
+      >
         <p className={styles.sectionSubText}>En que he trabajado</p>
         <h2 className={styles.sectionHeadText}>Proyectos.</h2>
       </motion.div>
@@ -71,7 +81,7 @@ const Works = () => {
           para ver el repositorio de este.
         </motion.p>
       </div>
-      <div className="mt-20 flex flex-wrap gap-7">
+      <div className="mt-20 flex justify-center flex-wrap gap-7">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}

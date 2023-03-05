@@ -15,14 +15,13 @@ import {
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
-  carrent,
-  jobit,
-  tripguide,
-  threejs,
+  merken,
+  cleoatelierreact,
+  cleoangular,
+  rest,
+  dashboard,
+  crud,
+  ecomsur,
 } from "../assets";
 
 export const navLinks = [
@@ -114,7 +113,7 @@ const experiences = [
   {
     title: "Front End Developer",
     company_name: "Ecomsur",
-    icon: starbucks,
+    icon: ecomsur,
     iconBg: "#383E56",
     date: "Oct 2021 - Actualidad",
     points: [
@@ -126,7 +125,7 @@ const experiences = [
   {
     title: "Desarrollador Full Stack",
     company_name: "Agencia Merkén SPA",
-    icon: tesla,
+    icon: merken,
     iconBg: "#E6DEDD",
     date: "ago 2020 - dic 2020",
     points: [
@@ -136,38 +135,11 @@ const experiences = [
   },
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
-
 const projects = [
   {
-    name: "Car Rent",
+    name: "Cleo Atelier (REACTJS) | Aplicacion de comercio Electrónico",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Plataforma Ecomerce desarrollada usando REACTJS como front end y NodeJS Express para el backend, esto conectado a una base de datos en MongoDB.",
     tags: [
       {
         name: "react",
@@ -177,46 +149,86 @@ const projects = [
         name: "mongodb",
         color: "green-text-gradient",
       },
+    ],
+    image: cleoatelierreact,
+    source_code_link:
+      "https://github.com/madelacerda/front-end-proyecto-5-udd?classId=6e51dfd7-9e2c-4cba-9f97-1ee4da6280f4&assignmentId=2462bc01-4b7e-41f0-9b21-39bb51b21d15&submissionId=cd160eb1-e3db-538a-4a19-a052a02566fa",
+  },
+  {
+    name: "Cleo Atelier (ANGULARJS) | Aplicacion de comercio Electrónico",
+    description:
+      "Plataforma Ecomerce desarrollada usando AnuglarJS como front end y NodeJS Express para el backend, esto conectado a una base de datos en MongoDB.",
+    tags: [
+      {
+        name: "Angular",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "mongodb",
+        color: "green-text-gradient",
+      },
+      {
+        name: "NodeJS",
+        color: "pink-text-gradient",
+      },
       {
         name: "tailwind",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
-    source_code_link: "https://github.com/",
+    image: cleoangular,
+    source_code_link:
+      "https://github.com/madelacerda/angular-eccomerce-front-end",
   },
   {
-    name: "Job IT",
+    name: "Restaurant App",
     description:
       "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
     tags: [
       {
-        name: "react",
+        name: "Angular",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "mongodb",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "NodeJS",
         color: "pink-text-gradient",
       },
     ],
-    image: jobit,
-    source_code_link: "https://github.com/",
+    image: rest,
+    source_code_link: "https://github.com/madelacerda/proyecto-4-udd",
   },
   {
-    name: "Trip Guide",
+    name: "Tablero Dashboard",
     description:
       "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
     tags: [
       {
-        name: "nextjs",
+        name: "reactjs",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "css",
+        color: "pink-text-gradient",
+      },
+    ],
+    image: dashboard,
+    source_code_link: "https://github.com/",
+  },
+  {
+    name: "Aplicacion CRUD",
+    description:
+      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+    tags: [
+      {
+        name: "HTML",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "JavaScript",
         color: "green-text-gradient",
       },
       {
@@ -224,9 +236,9 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: crud,
     source_code_link: "https://github.com/",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

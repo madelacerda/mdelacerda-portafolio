@@ -19,18 +19,23 @@ import reactjs from "./tech/reactjs.png";
 import redux from "./tech/redux.png";
 import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
-import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import ecomsur from "./ecom-favicon_Mesa-de-trabajo-1.png";
+import merken from "./1670870404924.jfif";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import cleoatelierreact from "./cleoatelierreact.png";
+import cleoangular from "./cleoangular.png";
+import rest from "./restaurante.png";
+import dashboard from "./dashboard.png";
+
+import crud from "./crud.png";
 
 export {
+  merken,
+  cleoangular,
+  crud,
+  dashboard,
+  rest,
   logo,
   backend,
   creator,
@@ -51,12 +56,6 @@ export {
   redux,
   tailwind,
   typescript,
-  threejs,
-  meta,
-  shopify,
-  starbucks,
-  tesla,
-  carrent,
-  jobit,
-  tripguide,
+  ecomsur,
+  cleoatelierreact,
 };
